@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import TodoForm from './TodoForm'
 import { RiCloseLine } from 'react-icons/ri'
 
 function Todo({ todo, index, completeTodo, removeTodo }) {

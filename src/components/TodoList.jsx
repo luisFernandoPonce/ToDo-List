@@ -6,7 +6,7 @@ function TodoList() {
   const [todos, setTodos] = useState([])
   
   const agregarTodo = todo => {
-    if (!todo.text || /^\s*$/.test(todo.text)) {
+    if (!todo.text) {
       return;
     }
     
@@ -40,7 +40,7 @@ function TodoList() {
         {todos.map((todo, index) => (
         <Todo 
           todo = {todo}
-          index = {index}
+          key = {index}
           todos = {todos}
           completeTodo = {completeTodo}
           removeTodo = {removeTodo}
