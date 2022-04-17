@@ -20,7 +20,7 @@ function TodoForm(props) {
   return (
     <form className='todo-form' onSubmit={manejarSubmit}  >
       <input type="text" className='todo-input' placeholder='Agrega una tarea' value={input} name='text' onChange={manejarCambio} />
-      <button className='todo-button'>Agrega tarea</button>
+      
     </form>
   )
 }

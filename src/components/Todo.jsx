@@ -1,30 +1,31 @@
 import React, { useState } from 'react'
 import TodoForm from './TodoForm'
-import { RiCloseCircleLine } from 'react-icons/ri'
-import { TiEdit } from 'react-icons/ti'
+import { RiCloseLine } from 'react-icons/ri'
 
-function Todo({ todos, completeTodo, removeTodo }) {
-  const [edit, setEdit] = useState({
-    id: null,
-    value: ''
-  })
-  return todos.map((todo, index) => (
-    <div className={todo.isComplete ? 'todo-row complete' : 'todo-row'} key={index} >
-      <div key={todo.id} onClick={() => completeTodo(todo.id)} >
+function Todo({ todo, index, completeTodo, removeTodo }) {
+  const [show, setShow] = useState(false)
+  
+  const iconVisibility = () => {
+    setShow(true)
+  }
+  const iconInvisibility = () => {
+    setShow(false)
+  }
+
+  return (
+    <div className='todo-row' key={index} onMouseEnter={iconVisibility} onMouseLeave={iconInvisibility} >
+      <div key={todo.id} onClick={() => completeTodo(todo.id)}  >
         {todo.text}
       </div>
-      <div className='icons' >
-        <RiCloseCircleLine 
+      <div className={!show ? 'icon-hide' : 'icon' } >
+        <RiCloseLine 
           onClick={() => removeTodo(todo.id)}
           className='delete-icon'
         />
-        <TiEdit 
-          onClick={() => setEdit({id: todo.id, value: todo.text})}
-          className='edit-icon'
-         />
       </div>
     </div>
-  )) 
+  )
+ 
 }
 
 export default Todo

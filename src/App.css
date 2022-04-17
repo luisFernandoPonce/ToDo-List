@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  background-color: whitesmoke;
+}
+
+.todo-body {
+  text-align: center;
+  margin: 15px;
+}
+.main-box {
+  margin: auto;
+  margin-top: 15px;
+  box-shadow: 1px 1px 1px 1px rgb(155, 154, 154);
+  width: 60%;
+  background-color: white;
+}
+
+form {
+  border-bottom: 1px solid lightgrey;
+}
+.todo-input {
+  height: 40px;
+  width: 95%;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}  
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  height: 40px;
+  padding: 10px;
+  text-transform: uppercase;
+  color: rgb(142, 140, 140);
+  background-color: white;
+
+}
+
+.footer {
+  font-size: .8rem;
+  color: grey;
+  text-align: left;
+  padding: 10px 0 0 10px;
+  height: 30px;
+
+}
+
+.icon-hide {
+  visibility: hidden;
+}
