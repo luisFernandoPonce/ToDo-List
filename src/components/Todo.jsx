@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { RiCloseLine } from 'react-icons/ri'
+//import { RiCloseLine } from 'react-icons/ri'
 
-function Todo({ todo, index, completeTodo, removeTodo }) {
+function Todo({ todo, index, completeTodo }) {
   const [show, setShow] = useState(false)
   
   const iconVisibility = () => {
@@ -13,15 +13,11 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
 
   return (
     <div className='todo-row' key={index} onMouseEnter={iconVisibility} onMouseLeave={iconInvisibility} >
-      <div key={todo.id} onClick={() => completeTodo(todo.id)}  >
-        {todo.text}
+      <div key={todo.input} onClick={() => completeTodo(todo.input)}  >
+        {todo.label}
       </div>
-      <div className={!show ? 'icon-hide' : 'icon' } >
-        <RiCloseLine 
-          onClick={() => removeTodo(todo.id)}
-          className='delete-icon'
-        />
-      </div>
+      
+      
     </div>
   )
  

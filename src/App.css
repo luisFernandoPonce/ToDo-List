@@ -58,3 +58,17 @@ input:focus {
 .icon-hide {
   visibility: hidden;
 }
+
+button {
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px #888888;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
