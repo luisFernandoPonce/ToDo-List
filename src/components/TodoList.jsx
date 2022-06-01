@@ -90,7 +90,7 @@ function TodoList() {
 
   return (
     <div className='todo-body'>
-      <h1>Jack's ToDo - API Fetch</h1>
+      <h1>ToDo List</h1>
       <div className='main-box'>
         <TodoForm onSubmit={postPutTodos} />
         {todos.map((todo, index) => (
@@ -106,7 +106,7 @@ function TodoList() {
           {todos.length} {!todos.length ? 'tarea pendiente' : 'tareas pendiente'}
         </div>
       </div>
-      <button onClick={deleteTodosList}>Limpiar listado</button>
+      <button onClick={deleteTodosList}>Limpiar</button>
     </div>
   )
 }
