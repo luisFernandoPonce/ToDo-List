@@ -106,7 +106,7 @@ function TodoList() {
           {todos.length} {!todos.length ? 'tarea pendiente' : 'tareas pendiente'}
         </div>
       </div>
-      <button onClick={deleteTodosList}>Limpiar</button>
+      <button onClick={deleteTodosList}>Borrar</button>
     </div>
   )
 }
