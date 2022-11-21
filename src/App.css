@@ -4,8 +4,8 @@
 }
 
 body {
-  font-family: 'Righteous', cursive;
-  background-color: rgb(228, 223, 223);
+  font-family: Copperplate, Papyrus, fantasy;
+  background-color: rgb(187, 181, 181);
 }
 
 .todo-body {
@@ -60,12 +60,12 @@ input:focus {
 }
 
 button {
-  font-size: 20px;
+  font-size: 25px;
   background-color: black;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
-  box-shadow: 5px 5px #888888;
+  box-shadow: 7px 7px #888888;
 }
 
 button:hover {
